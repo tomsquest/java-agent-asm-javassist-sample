@@ -39,7 +39,8 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.19.1</version>
         <configuration>
-          <argLine>-javaagent:/Users/HL/Documents/CoffeeMaker/java-agent-asm-javassist-sample/agent/target/agent-0.1-SNAPSHOT.jar</argLine>
+		  <!-- Change the following relative path to always point to java agent -->
+          <argLine>-javaagent:../agent/target/agent-0.1-SNAPSHOT.jar</argLine>
         </configuration>
       </plugin>
     </plugins>
