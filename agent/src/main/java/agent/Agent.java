@@ -23,21 +23,6 @@ public class Agent {
                     reader.accept(visitor, 0);
                     return writer.toByteArray();
 
-                    // Javassist
-//                    try {
-//                        ClassPool cp = ClassPool.getDefault();
-//                        CtClass cc = cp.get("other.Stuff");
-//                        CtMethod m = cc.getDeclaredMethod("run");
-//                        m.addLocalVariable("elapsedTime", CtClass.longType);
-//                        m.insertBefore("elapsedTime = System.currentTimeMillis();");
-//                        m.insertAfter("{elapsedTime = System.currentTimeMillis() - elapsedTime;"
-//                                + "System.out.println(\"Method Executed in ms: \" + elapsedTime);}");
-//                        byte[] byteCode = cc.toBytecode();
-//                        cc.detach();
-//                        return byteCode;
-//                    } catch (Exception ex) {
-//                        ex.printStackTrace();
-//                    }
                 }
 
                 return null;
