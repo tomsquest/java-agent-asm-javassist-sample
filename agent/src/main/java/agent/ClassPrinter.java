@@ -19,8 +19,8 @@ public class ClassPrinter extends ClassVisitor {
 
     @Override
     public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-        System.out.println(" " + name + desc);
-        return super.visitMethod(access, name, desc, signature, exceptions);
+        MethodVisitor mv = cv.visitMethod(access, name, desc, signature, exceptions);
+        return mv == null ? null : new MethodPrinter(mv, name);
     }
 
     @Override
